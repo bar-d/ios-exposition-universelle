@@ -49,4 +49,14 @@ class ParsingTests: XCTestCase {
         guard let formattedResult = numberformatter.string(for: a) else { return }
         print(formattedResult)
     }
+    
+    // parse
+    func test_2() {
+        
+        guard let a = try? JSONParser().parseExpoInformation() else { return }
+        print(a.location)
+        
+        guard let b = try? JSONParser().parseEntryList() else { return }
+        print(b[0].imageName)
+    }
 }

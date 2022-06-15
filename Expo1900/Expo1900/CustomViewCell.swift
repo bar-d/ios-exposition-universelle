@@ -1,0 +1,38 @@
+//
+//  CustomTableViewCell.swift
+//  Expo1900
+//
+//  Created by 김동용 on 2022/06/15.
+//
+
+import UIKit
+
+class CustomTableViewCell: UITableViewCell {
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var title1: UILabel!
+    @IBOutlet weak var shortDescription: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        self.showCell()
+        
+    }
+    
+    func showCell() {
+        let jsonParser = JSONParser()
+        guard let titleText = try? jsonParser.parseEntryList().first?.imageName else { return }
+        guard let shortDescriptionText = try? jsonParser.parseEntryList().first?.shortDescription else { return }
+        
+        
+        title1?.text = titleText
+        shortDescription?.text = shortDescriptionText
+    }
+    
+    
+
+}
+
