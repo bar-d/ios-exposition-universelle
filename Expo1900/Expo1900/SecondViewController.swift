@@ -40,18 +40,24 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.image1.image = UIImage(named: entryList[indexPath.row].imageName)
         // 액세서리
         cell.accessoryType = .disclosureIndicator
-
+        // 세번째 뷰를 위한 description
+        cell.detailedDescription = entryList[indexPath.row].description
+        
+        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let nextViewController: ThirdViewController = segue.destination as? ThirdViewController else { return }
         
         guard let cell: CustomTableViewCell = sender as? CustomTableViewCell else { return }
         
+        nextViewController.imageToSet = cell.image1
+        nextViewController.textToSet = cell.detailedDescription
         nextViewController.navi2.title = cell.title1.text
 //        nextViewController.navi2.backButtonTitle = cell.title1.text
-        nextViewController.textToSet = cell.title1.text
+//        nextViewController.textToSet = cell.title1.text
 //        nextViewController.imageToSet = cell.image1.image()
     }
 }
