@@ -9,12 +9,17 @@ import UIKit
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navi: UINavigationItem!
     let entryList = try! JSONParser().parseEntryList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        navi.title = "한국의 출품작"
+//        navi.backButtonTitle = "메인"
+        
+        
     }
     
 
@@ -32,7 +37,20 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.shortDescription.text = entryList[indexPath.row].shortDescription
         // 이미지
         cell.image1.image = UIImage(named: entryList[indexPath.row].imageName)
+        // 액세서리
+        cell.accessoryType = .disclosureIndicator
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextViewController: ThirdViewController = segue.destination as? ThirdViewController else { return }
+        
+        guard let cell: CustomTableViewCell = sender as? CustomTableViewCell else { return }
+        
+        nextViewController.navi2.title = cell.title1.text
+//        nextViewController.navi2.backButtonTitle = cell.title1.text
+        nextViewController.textToSet = cell.title1.text
+//        nextViewController.imageToSet = cell.image1.image()
     }
 }

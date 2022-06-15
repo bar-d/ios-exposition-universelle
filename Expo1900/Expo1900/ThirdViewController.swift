@@ -8,22 +8,25 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
-
+    var textToSet: String?
+    var imageToSet: UIImageView?
+    @IBOutlet weak var imageview: UIImageView!
+    @IBOutlet weak var description2: UILabel!
+    @IBOutlet weak var navi2: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let secondViewController = SecondViewController()
+//        self.navi2.backButtonTitle = secondViewController.title
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let secondViewController = SecondViewController()
+        self.navi2.backButtonTitle = secondViewController.title
+        self.description2.text = self.textToSet
     }
-    */
 
+  
 }
