@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var duration: UILabel!
     @IBOutlet weak var description1: UILabel!
-    
+    @IBOutlet weak var initialNavi: UINavigationItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +30,7 @@ class ViewController: UIViewController {
         location.text = "개최지 : " + decodedData.location
         duration.text = "개최 기간 : " + decodedData.duration
         description1.text = decodedData.description
+        
+        initialNavi?.backButtonTitle = "메인"
     }
 }

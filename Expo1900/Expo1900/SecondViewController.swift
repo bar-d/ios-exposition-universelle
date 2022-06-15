@@ -11,18 +11,19 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navi: UINavigationItem!
     let entryList = try! JSONParser().parseEntryList()
+    let firstViewController = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         navi.title = "한국의 출품작"
-//        navi.backButtonTitle = "메인"
-        
         
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+//        navi.backButtonTitle = "메인"
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entryList.count
     }

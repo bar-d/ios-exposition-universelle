@@ -125,6 +125,7 @@
                         <outlet property="description1" destination="IKQ-yh-o89" id="FBf-eg-k84"/>
                         <outlet property="duration" destination="8zr-RL-ctl" id="Jbf-uJ-zXG"/>
                         <outlet property="image" destination="4Lz-V3-mjZ" id="44D-rQ-6Z1"/>
+                        <outlet property="initialNavi" destination="0gd-04-fCn" id="59K-bq-WBh"/>
                         <outlet property="location" destination="7JD-Tx-fRC" id="5v0-ub-cHL"/>
                         <outlet property="title1" destination="29z-G3-UwO" id="kBt-gT-5Hg"/>
                         <outlet property="visitors" destination="QgS-sR-TV8" id="cQk-NP-8mw"/>
@@ -255,7 +256,6 @@
                     <connections>
                         <outlet property="description2" destination="fOW-Ag-pvN" id="CvC-RR-NKC"/>
                         <outlet property="imageview" destination="4FC-dr-Nvy" id="8Z7-tv-1Eg"/>
-                        <outlet property="navi2" destination="itL-hW-KTv" id="DiO-5m-mN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZqI-T0-zCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
