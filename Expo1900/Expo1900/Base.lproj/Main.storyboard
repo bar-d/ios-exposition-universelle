@@ -174,9 +174,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="image1" destination="VzL-Su-idh" id="YL2-Sa-sgH"/>
-                                            <outlet property="shortDescription" destination="L5d-Jl-XEx" id="Ziy-b7-wyu"/>
-                                            <outlet property="title1" destination="yOm-1m-b7P" id="3xo-Z5-Mks"/>
+                                            <outlet property="image1" destination="VzL-Su-idh" id="2oc-H3-n5f"/>
+                                            <outlet property="shortDescription" destination="L5d-Jl-XEx" id="QCr-EC-Gnz"/>
+                                            <outlet property="title1" destination="yOm-1m-b7P" id="pOq-hy-rFo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
