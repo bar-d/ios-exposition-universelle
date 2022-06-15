@@ -29,4 +29,24 @@ class ParsingTests: XCTestCase {
         //then
         XCTAssertEqual(result, decodedData.first?.imageName)
     }
+    
+    func test_() {
+        let a = 1231244124
+        
+        let numberformatter = NumberFormatter()
+        numberformatter.numberStyle = .decimal
+        
+        guard let formattedResult = numberformatter.string(from: a as NSNumber) else { return }
+        print(formattedResult)
+    }
+    
+    func test_1() {
+        let a = "1231244124"
+        let numberformatter = NumberFormatter()
+        numberformatter.numberStyle = .decimal
+        
+        print("ASdf")
+        guard let formattedResult = numberformatter.string(for: a) else { return }
+        print(formattedResult)
+    }
 }
