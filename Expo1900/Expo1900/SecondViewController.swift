@@ -18,7 +18,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
         self.tableView.delegate = self
         navi.title = "한국의 출품작"
-        
+        self.navigationController?.isNavigationBarHidden = false
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

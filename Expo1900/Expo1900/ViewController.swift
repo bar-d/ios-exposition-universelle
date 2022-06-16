@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         guard let data = NSDataAsset(name: "exposition_universelle_1900")?.data else { return }
         guard let decodedData = try? JSONDecoder().decode(ExpoInformation.self, from: data) else { return }
         let headTitle = decodedData.title.split(separator: "(")
-        
+        self.navigationController?.isNavigationBarHidden = true
 //        title1.text = decodedData.title
         title1.text = headTitle[0] + "\n(\(headTitle[1])"
         image.image = UIImage(named: "poster")
@@ -32,5 +32,9 @@ class ViewController: UIViewController {
         description1.text = decodedData.description
         
         initialNavi?.backButtonTitle = "메인"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
 }

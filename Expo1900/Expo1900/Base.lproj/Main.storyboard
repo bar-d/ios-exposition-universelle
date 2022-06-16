@@ -115,8 +115,8 @@
                         <constraints>
                             <constraint firstItem="Zqz-bi-9Fa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mkb-pa-tDA"/>
                             <constraint firstItem="Zqz-bi-9Fa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Waf-af-aGH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zqz-bi-9Fa" secondAttribute="bottom" id="fSR-Yo-9J2"/>
-                            <constraint firstItem="Zqz-bi-9Fa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oFW-Gd-E4E"/>
+                            <constraint firstAttribute="bottom" secondItem="Zqz-bi-9Fa" secondAttribute="bottom" id="fSR-Yo-9J2"/>
+                            <constraint firstItem="Zqz-bi-9Fa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oFW-Gd-E4E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0gd-04-fCn"/>

@@ -15,8 +15,6 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var navi2: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let secondViewController = SecondViewController()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
