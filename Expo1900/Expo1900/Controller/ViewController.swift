@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         // 네비게이션 안보이게 하기
         self.navigationController?.isNavigationBarHidden = true
         initialNavi?.backButtonTitle = "메인"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

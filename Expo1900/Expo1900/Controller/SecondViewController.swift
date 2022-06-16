@@ -10,14 +10,16 @@ import UIKit
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navi: UINavigationItem!
-    let entryList = try! JSONParser().parseEntryList()
+    let entryList = try! JSONParser.parseEntryList()
     let firstViewController = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        // 네비게이션 타이틀
         navi.title = "한국의 출품작"
+        // 네비게이션 보이게 하기
         self.navigationController?.isNavigationBarHidden = false
     }
     
@@ -50,8 +52,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let nextViewController: ThirdViewController = segue.destination as? ThirdViewController else { return }
         guard let cell: CustomTableViewCell = sender as? CustomTableViewCell else { return }
         
+        // 세번째 뷰컨 이미지 설정
         nextViewController.imageToSet = cell.image1
+        // 세번째 설명 레이블 설정
         nextViewController.textToSet = cell.detailedDescription
+        // 세번째 네비게이션 타이틀 설정
         nextViewController.navi2.title = cell.title1.text
     }
 }

@@ -12,3 +12,5 @@ struct ExpoInformation: Codable {
     var duration: String
     var description: String
 }
+
+

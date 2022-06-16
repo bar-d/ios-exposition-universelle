@@ -61,41 +61,46 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" ambiguous="YES" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sjc-0i-chh">
-                                                <rect key="frame" x="5" y="630" width="388" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" ambiguous="YES" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sjc-0i-chh">
+                                                <rect key="frame" x="40" y="630" width="318" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="a7k-IA-wyR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Muh-W2-CH6"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-TG-6He">
-                                                        <rect key="frame" x="132" y="1" width="124" height="48"/>
+                                                        <rect key="frame" x="82.5" y="0.0" width="153" height="50"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="한국의 출품작 보러가기"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="한국의 출품작 보러가기">
+                                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="Rt1-Bs-r73" kind="show" id="t1z-U4-SYe"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-0Y-Zoj">
-                                                        <rect key="frame" x="264" y="0.0" width="124" height="50"/>
+                                                        <rect key="frame" x="240.5" y="0.0" width="77.5" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="EOo-Bq-5ii"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="MxM-0Y-Zoj" firstAttribute="width" secondItem="a7k-IA-wyR" secondAttribute="width" id="ICS-5g-hFr"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="ZG4-xm-e0i" firstAttribute="top" secondItem="a5W-nM-Kxc" secondAttribute="top" constant="5" id="5CW-Ys-Enb"/>
                                             <constraint firstItem="sjc-0i-chh" firstAttribute="top" secondItem="ZG4-xm-e0i" secondAttribute="bottom" constant="20" id="e4c-WW-qwM"/>
-                                            <constraint firstAttribute="trailing" secondItem="sjc-0i-chh" secondAttribute="trailing" constant="5" id="fOt-p3-Vgp"/>
+                                            <constraint firstAttribute="trailing" secondItem="sjc-0i-chh" secondAttribute="trailing" constant="40" id="fOt-p3-Vgp"/>
                                             <constraint firstAttribute="bottom" secondItem="sjc-0i-chh" secondAttribute="bottom" constant="20" id="gqB-cc-H7c"/>
                                             <constraint firstItem="ZG4-xm-e0i" firstAttribute="leading" secondItem="a5W-nM-Kxc" secondAttribute="leading" constant="20" id="hNE-Sr-KwR"/>
                                             <constraint firstAttribute="trailing" secondItem="ZG4-xm-e0i" secondAttribute="trailing" constant="10" id="mf4-SC-BOi"/>
-                                            <constraint firstItem="sjc-0i-chh" firstAttribute="leading" secondItem="a5W-nM-Kxc" secondAttribute="leading" constant="5" id="ufX-XF-OX6"/>
+                                            <constraint firstItem="sjc-0i-chh" firstAttribute="leading" secondItem="a5W-nM-Kxc" secondAttribute="leading" constant="40" id="ufX-XF-OX6"/>
                                         </constraints>
                                     </view>
                                 </subviews>

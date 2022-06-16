@@ -20,7 +20,9 @@ class ThirdViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // 세번째 뷰컨 이미지 설정
         self.imageview.image = self.imageToSet?.image
+        // 세번째ㅔ 뷰컨에서 보여질 설명 레이블 텍스트 설정
         self.description2.text = self.textToSet  
     }
 }
