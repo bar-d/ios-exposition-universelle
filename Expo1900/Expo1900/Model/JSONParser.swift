@@ -5,8 +5,8 @@
 //  Created by 김동용 on 2022/06/15.
 //
 
-import Foundation
 import UIKit
+
 struct JSONParser {
     func parseExpoInformation() throws -> ExpoInformation {
         guard let data = NSDataAsset(name: "exposition_universelle_1900")?.data else { throw ParseError.unknown }

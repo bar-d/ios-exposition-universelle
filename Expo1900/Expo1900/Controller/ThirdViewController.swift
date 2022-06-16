@@ -8,11 +8,12 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
-    var textToSet: String?
-    var imageToSet: UIImageView?
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var description2: UILabel!
     @IBOutlet weak var navi2: UINavigationItem!
+    var textToSet: String?
+    var imageToSet: UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,8 +21,6 @@ class ThirdViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.imageview.image = self.imageToSet?.image
-        self.description2.text = self.textToSet
+        self.description2.text = self.textToSet  
     }
-
-  
 }
